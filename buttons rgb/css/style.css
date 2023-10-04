@@ -1,0 +1,99 @@
+
+
+*{
+    
+    box-sizing:         border-box;
+}
+
+html,body{
+    display:            grid;
+    height:             100%;
+    place-items:        center;
+    background-color: #000000;
+}
+
+
+.center{
+    display:            flex;
+    text-align:         center;
+    align-items:        center;
+    justify-content:    center;
+
+}
+
+.outer{
+    position:           relative;
+    margin:             0 50px;
+    background:      #111; 
+}
+
+.button{
+    height:             70px;
+    width:              220px;
+    border-radius:      50px;
+}
+
+
+                                
+
+.outer button{
+    background:     #000000;
+    color:          #f2f2f2;
+    outline:            none;
+    border:             none;
+    font-size:          25px ;
+    z-index:            9;
+    letter-spacing:     1px;
+    text-transform:     uppercase;
+    cursor:             pointer;
+}
+
+
+.button button{
+    height:             60px;
+    width:              210px;
+    border-radius:      50px;
+}
+
+
+.outer span{
+    height:             100%;
+    width:              100%;
+    background:         inherit;
+}
+
+ .button span {
+    border-radius:      50px;
+}
+
+
+.outer:hover span:nth-child(1){
+filter:                 blur(52px);
+}
+
+.outer:hover span:nth-child(2){
+    filter:             blur(52px);
+}
+
+
+.outer:hover {
+    background:         linear-gradient(#1bd60a, #e0ca09, #d40bbd);
+    animation:          rotate 1.5s linear infinite;
+}
+
+@keyframes rotate{
+    100%{
+        filter:         hue-rotate(360deg);
+    }
+}
+
+@media (max-width:640px){
+    .center{
+        flex-wrap:              wrap;
+        flex-direction:         column;
+    }
+    .outer{
+        margin:                 50px 0px;
+        
+    }
+}
